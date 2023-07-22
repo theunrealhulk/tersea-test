@@ -38,10 +38,7 @@ class User extends Authenticatable
     }
     public function isAdmin()
     {
-        return !$this->employee();
+        return $this->employee === null;
     }
-    public function isEmployee()
-    {
-        return $this->employee();
-    }
+
 }
