@@ -1,0 +1,24 @@
+{
+  "name": "tersea-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && php artisan serve",
+    "frontend": "cd frontend && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theunrealhulk/tersea-test.git"
+  },
+  "author": "JC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theunrealhulk/tersea-test/issues"
+  },
+  "homepage": "https://github.com/theunrealhulk/tersea-test#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
