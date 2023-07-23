@@ -40,7 +40,7 @@ const login=()=>{
   </div>
 </template>
 
-<style scoped>
+<style >
 input{
   color: white;
 }

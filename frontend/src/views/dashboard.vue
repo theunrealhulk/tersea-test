@@ -2,6 +2,12 @@
 import { onMounted,ref } from 'vue'
 import logout from '../components/logout.vue'
 import axios from 'axios';
+import addAdmin from '../components/admin/addAdmin.vue';
+import companies from '../components/admin/companies.vue';
+import invitations from '../components/admin/invitations.vue';
+import histories from '../components/admin/histories.vue';
+
+
 const user=ref({})
 onMounted(()=>{
   const token =JSON.parse(localStorage.getItem('agent')).token
@@ -22,35 +28,31 @@ onMounted(()=>{
   <div class="container">
     <div class="row">
       <p>Hey {{ user.name }}<logout/></p>
-      
-
     </div>
     <div class="row">
-    <div class="col s12">
-      <ul class="tabs">
-        <li class="tab col s3"><a href="#admins" class="active">Admins</a></li>
-        <li class="tab col s3"><a href="#companies">companies</a></li>
-        <li class="tab col s3 "><a href="#invitations">invitations</a></li>
-        <li class="tab col s3"><a href="#history">activity log</a></li>
-      </ul>
-    </div>
-    <div id="admins" class="col s12">
-      Test 1
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s3"><a href="#admins" class="active">Admins</a></li>
+          <li class="tab col s3"><a href="#companies">companies</a></li>
+          <li class="tab col s3 "><a href="#invitations">invitations</a></li>
+          <li class="tab col s3"><a href="#history">activity log</a></li>
+        </ul>
+      </div>
+      <div id="admins" class="col s12">
+        <addAdmin :user="user"/>
+      </div>
+      <div id="companies" class="col s12">
+        <companies/>
+      </div>
 
-    </div>
-    <div id="companies" class="col s12">
-      Test 2
+      <div id="invitations" :user="user" class="col s12">
+        <invitations/>
+      </div>
 
+      <div id="history" class="col s12">
+        <histories/>
+      </div>
     </div>
-    <div id="invitations" class="col s12">
-      Test 3
-
-    </div>
-    <div id="history" class="col s12">
-      Test 4
-
-    </div>
-  </div>
   </div>
 </template>
 <style scoped>
