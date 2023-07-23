@@ -11,9 +11,9 @@ onMounted(()=>{
 </script>
 
 <template>
-  <header>
+
     <RouterView />
-  </header>
+
 
 </template>
 

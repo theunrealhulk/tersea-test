@@ -3,6 +3,7 @@ import login from '../views/login.vue'
 import dashboard from '../views/dashboard.vue'
 import profile from '../views/profile.vue'
 import register from '../views/register.vue'
+import axios from 'axios'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -57,5 +58,26 @@ router.beforeEach((to, from, next) => {
       next({ name: agent.isAdmin ? 'dashboard' : 'profile' });
     }
   }
+
+  checkTokenAuthenticity()
 });
+
+const checkTokenAuthenticity = () =>{
+  let token=localStorage.getItem("agent")!=null ?JSON.parse(localStorage.getItem("agent")).token:false
+  if(token)
+  {
+    axios.get('http://localhost:8000/api/user',{
+      headers:{
+        Authorization :`Bearer ${token}`
+      }
+    })
+    .then((response)=>{})
+    .catch(()=>{
+      router.push({
+        name:"login",
+      })
+    })
+  }
+  return false
+}
 export default router
