@@ -21,7 +21,6 @@ Route::group(['middleware'=>['auth:sanctum']],function(){
     Route::delete('/invite/{invitation}',[AdminController::class,'cancel']);
 
     //employee
-    Route::get('/employee', [EmployeeController::class,'getCompany']);
     Route::put('/employee', [EmployeeController::class,'update']);
 
     //both
@@ -32,5 +31,5 @@ Route::group(['middleware'=>['auth:sanctum']],function(){
 });
 
 Route::post('/login',[LoginController::class,'login']);
-Route::get('/invitation/{invite}',[EmployeeController::class,'accept']);
+Route::get('/invitation/{invite}', [EmployeeController::class, 'accept'])->name('api.invitation.accept');
 Route::post('/invitation/{invite}',[EmployeeController::class,'confirm']);

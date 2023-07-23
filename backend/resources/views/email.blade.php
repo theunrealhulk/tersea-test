@@ -31,10 +31,11 @@
     <div>
 
     <h3>Hello {{$invitation->name}} </h3>
-    <h4>this is invited to join company {{$company}} as a new member</h4>
+    <h4>this is an invitation to join company {{$company}} as a new member</h4>
     <br>
     click on the button to validate and compleate you account <br><br>
     sincerely regards<br>
     {{ $admin }}<br>
+
     <a href="http://localhost:8000/api/invitation/{{$invitation->id}}">this way</a><br>
     </div>

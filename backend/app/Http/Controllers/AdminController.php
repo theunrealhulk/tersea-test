@@ -107,7 +107,7 @@ class AdminController extends Controller
             ]);
             //create history
             History::create([
-                'log'=> date('d/m/Y H:i', time())."/ Admin ".auth()->user()->name . " sent invitation mail to ".$data['name']." to join Company : ".$company->name
+                'log'=> date('d/m/Y H:i', time())." / Admin ".auth()->user()->name . " sent invitation mail to ".$data['name']." to join Company : ".$company->name
             ]);
             //send email
             Mail::send('email', [
@@ -132,7 +132,7 @@ class AdminController extends Controller
             $invitation->destroy($invitation->id);
             //create history
             History::create([
-                'log'=> date('d/m/Y H:i', time())."/ Admin ".auth()->user()->name . " cancelled ".$invitation->name." invitation"
+                'log'=> date('d/m/Y H:i', time())." / Admin ".auth()->user()->name . " cancelled ".$invitation->name." invitation"
             ]);
             return response()->json(["message"=>"invitation cancelled"],201);
         }

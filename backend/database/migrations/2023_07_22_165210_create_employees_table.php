@@ -18,9 +18,9 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(User::class);
             $table->foreignIdFor(Company::class);
-            $table->string('address');
-            $table->string('phone');
-            $table->date('birth_day');
+            $table->string('address')->nullable();
+            $table->string('phone')->nullable();
+            $table->date('birth_day')->nullable();
             $table->timestamps();
         });
     }
