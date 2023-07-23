@@ -19,6 +19,7 @@ Route::group(['middleware'=>['auth:sanctum']],function(){
     Route::delete('/company/{company}',[AdminController::class, 'destroyCompany']);
     Route::post('/invite/{company}',[AdminController::class,'invite']);
     Route::delete('/invite/{invitation}',[AdminController::class,'cancel']);
+    Route::get('/history',[AdminController::class,'history']);
 
     //employee
     Route::put('/employee', [EmployeeController::class,'update']);

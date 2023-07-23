@@ -139,4 +139,9 @@ class AdminController extends Controller
         else
         return  response()->json(['message' => $invitation->name." already accepted the invite"]);
     }
+
+    public function history()
+    {
+        return response()->json(['data'=> History::all()],200);
+    }
 }
