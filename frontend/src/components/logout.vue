@@ -19,7 +19,7 @@ const logout=()=>{
 </script>
 
 <template>
-<span id="logout" @click="logout()" class="btn-floating btn-small waves-effect waves-light red"><i class="mdi mdi-power"></i></span>
+<span id="logout" @click="logout()" class="btn-floating btn-small waves-effect waves-light purple darken-1"><i class="mdi mdi-power"></i></span>
 </template>
 <style scoped>
 #logout{
