@@ -45,7 +45,7 @@ onMounted(()=>{
       </div>
 
       <div id="invitations"  class="col s12">
-        <invitations/>
+        <invitations />
       </div>
 
       <div id="history" class="col s12">

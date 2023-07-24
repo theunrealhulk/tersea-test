@@ -101,5 +101,10 @@ th{
     font-size:larger;
     text-decoration:underline
 }
+input:focus,input:visited{
+  color:white;
+  background-color:#111
+}
+
 </style>
 
