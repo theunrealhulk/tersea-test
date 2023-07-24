@@ -27,7 +27,7 @@ Route::group(['middleware'=>['auth:sanctum']],function(){
     //both
     Route::post('/logout',[LoginController::class,'logout']);
     Route::get('/user', function(Request $request) {
-        return $request->user()->load('employee.company.employees')->load('invitations.company');
+        return $request->user()->load('employee.company.employees.user')->load('invitations.company');
     });
 });
 

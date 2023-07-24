@@ -58,7 +58,7 @@ class EmployeeController extends Controller
                 'user_id'=>$user->id,
                 'company_id'=>$invitation->company_id,
                 'address'=>$request->address,
-                'phone'=>$request->address,
+                'phone'=>$request->phone,
                 'birth_day'=>$request->birth_day
             ]);
             // update history

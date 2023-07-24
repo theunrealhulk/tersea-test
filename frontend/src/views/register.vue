@@ -43,6 +43,10 @@ const registerEmployee=()=>{
       console.log(err);
     })
 }
+
+
+
+
 </script>
 
 <template>
@@ -63,7 +67,7 @@ const registerEmployee=()=>{
             <label for="icon_prefix"><i class="mdi mdi-lock"></i> password</label>
         </div>
         <div class="input-field col s12">
-            <input id="icon_prefix" type="number" class="validate" name="phone" v-model="employee.phone">
+            <input id="icon_prefix" type="text" class="validate" name="phone" v-model="employee.phone">
             <label for="icon_prefix"><i class="mdi mdi-phone"></i> Phone</label>
         </div>
         <div class="input-field col s12">
