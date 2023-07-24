@@ -37,5 +37,5 @@
     sincerely regards<br>
     {{ $admin }}<br>
 
-    <a href="http://localhost:8000/api/invitation/{{$invitation->id}}">this way</a><br>
+    <a href="http://localhost:5173/register?id={{$invitation->id}}">this way</a><br>
     </div>

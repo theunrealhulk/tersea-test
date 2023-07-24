@@ -12,7 +12,7 @@ class EmployeeController extends Controller
     public function accept( $id){
         //confirm invitation exist
         $invitation=Invitation::where('id',$id)->first();
-
+        $invitation->load('company');
         if($invitation && $invitation->status==='pending'){
             // if yes update status to validated
             $invitation->update([
@@ -24,7 +24,11 @@ class EmployeeController extends Controller
                 'log'=> date('d/m/Y H:i', time())." / Employee ".$invitation->name . " validated his invitation"
             ]);
 
-            return response()->json(['message'=>'invitation was validated'],201);
+            return response()->json(['message'=>'invitation was validated','data'=>$invitation],201);
+        }
+        else if($invitation && $invitation->status==='valid')
+        {
+            return response()->json(['data'=>$invitation],201);
         }
         //else send invitation has been cancelled
         else{

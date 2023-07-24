@@ -197,7 +197,7 @@ function filteredCompanies() {
             </div>
             <button type="submit" class="waves-effect waves-light btn"><i class="mdi mdi-account-plus"></i> submit</button>
         </form>
-        <h3>Update new Company</h3>
+        <h3>Update Company</h3>
         <form @submit.prevent="update()">
             <div class="input-field col s6">
                 <input id="icon_prefix" type="text"  name="name" v-model="updateCompany.name">
