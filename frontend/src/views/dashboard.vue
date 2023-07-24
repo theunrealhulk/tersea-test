@@ -1,12 +1,11 @@
 <script setup>
 import { onMounted,ref } from 'vue'
-import logout from '../components/logout.vue'
 import axios from 'axios';
+import logout from '../components/logout.vue'
 import addAdmin from '../components/admin/addAdmin.vue';
 import companies from '../components/admin/companies.vue';
 import invitations from '../components/admin/invitations.vue';
 import histories from '../components/admin/histories.vue';
-
 
 const user=ref({})
 onMounted(()=>{
@@ -39,13 +38,13 @@ onMounted(()=>{
         </ul>
       </div>
       <div id="admins" class="col s12">
-        <addAdmin :user="user"/>
+        <addAdmin/>
       </div>
       <div id="companies" class="col s12">
         <companies/>
       </div>
 
-      <div id="invitations" :user="user" class="col s12">
+      <div id="invitations"  class="col s12">
         <invitations/>
       </div>
 
