@@ -44,7 +44,7 @@ class AdminController extends Controller
         Company::create([
             'name'=>$data['name'],
             'website'=>$data['website'],
-            'about'=>bcrypt($data['about'])
+            'about'=>$data['about']
         ]);
         return response()->json(['message'=>'Company added successfully'],201);
     }
@@ -65,7 +65,7 @@ class AdminController extends Controller
         $company->update([
             'name'=>$data['name'],
             'website'=>$data['website'],
-            'about'=>bcrypt($data['about'])
+            'about'=>$data['about']
         ]);
         return response()->json(['message'=>'Company updated successfully'],201);
     }
