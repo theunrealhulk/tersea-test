@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
     "backend": "cd backend && php artisan serve",
-    "frontend": "cd frontend && npm run dev"
+    "frontend": "cd frontend && npm run dev",
+    "setup":"cd backend && copy .env.example .env && composer install && php artisan migrate --seed --force && cd ../frontend && npm i"
   },
   "repository": {
     "type": "git",

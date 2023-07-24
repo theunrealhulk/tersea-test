@@ -12,7 +12,6 @@ onMounted(() => {
     })
     .then((response) => {
         history.value=response.data.data
-     
     })
     .catch((error) => {
       console.error(error);

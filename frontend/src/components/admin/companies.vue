@@ -182,17 +182,17 @@ function filteredCompanies() {
         <h3>Add new Company</h3>
         <form @submit.prevent="add()">
             <div class="input-field col s6">
-                <input id="icon_prefix" type="text"  name="name1" v-model="company.name">
+                <input id="icon_prefix" type="text"  name="name1" v-model="company.name" required>
                 <label for="icon_prefix"><i class="mdi mdi-office-building"></i> company name</label>
             </div>
 
             <div class="input-field col s6">
-                <input id="icon_prefix" type="text"  name="website1" v-model="company.website">
+                <input id="icon_prefix" type="text"  name="website1" v-model="company.website" required>
                 <label for="icon_prefix"><i class="mdi mdi-web"></i> company website</label>
             </div>
 
             <div class="input-field col s6">
-                <input id="icon_prefix" type="text"  name="about1" v-model="company.about">
+                <input id="icon_prefix" type="text"  name="about1" v-model="company.about" required>
                 <label for="icon_prefix"><i class="mdi mdi-information"></i> about</label>
             </div>
             <button type="submit" class="waves-effect waves-light btn"><i class="mdi mdi-account-plus"></i> submit</button>
@@ -205,18 +205,18 @@ function filteredCompanies() {
             </div>
 
             <div class="input-field col s6">
-                <input id="icon_prefix" type="text"  name="website" v-model="updateCompany.website">
+                <input id="icon_prefix" type="text"  name="website" v-model="updateCompany.website" required>
                 <label for="icon_prefix"><i class="mdi mdi-web"></i> company website</label>
             </div>
 
             <div class="input-field col s6">
-                <input id="icon_prefix" type="text"  name="about" v-model="updateCompany.about">
+                <input id="icon_prefix" type="text"  name="about" v-model="updateCompany.about" required>
                 <label for="icon_prefix"><i class="mdi mdi-information"></i> about</label>
             </div>
             <button type="submit" class="waves-effect waves-light btn" :disabled="updateCompany.id === null"><i class="mdi mdi-content-save"  ></i> update</button>
         </form>
         <div class="input-field col s12">
-                <input @input="filteredCompanies()" id="icon_prefix" type="text" v-model="filterText"  name="about" placeholder="    enter company name or employee name to see if there is a match"/>
+                <input @input="filteredCompanies()" id="icon_prefix" type="text" v-model="filterText"  name="about" placeholder="    enter company name or employee name to see if there is a match" required />
                 <label for="icon_prefix"><i class="mdi mdi-filter"></i> </label>
             </div>
         <table >

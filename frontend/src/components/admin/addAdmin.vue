@@ -68,17 +68,17 @@ const addAdmin = () => {
         <h3>Add new Admin</h3>
         <form @submit.prevent="addAdmin()">
             <div class="input-field col s6">
-                <input id="icon_prefix" type="text" class="validate" name="name" v-model="credentials.name">
+                <input id="icon_prefix" type="text" class="validate" name="name" v-model="credentials.name" required>
                 <label for="icon_prefix"><i class="mdi mdi-account-tie"></i> Name</label>
             </div>
 
             <div class="input-field col s6">
-                <input id="icon_prefix" type="text" class="validate" name="email" v-model="credentials.email">
+                <input id="icon_prefix" type="text" class="validate" name="email" v-model="credentials.email" required>
                 <label for="icon_prefix"><i class="mdi mdi-email"></i> email</label>
             </div>
 
             <div class="input-field col s6">
-                <input id="icon_prefix" type="password" class="validate" name="password" v-model="credentials.password">
+                <input id="icon_prefix" type="password" class="validate" name="password" v-model="credentials.password" required>
                 <label for="icon_prefix"><i class="mdi mdi-lock"></i> password</label>
             </div>
             <button type="submit" class="waves-effect waves-light btn"><i class="mdi mdi-account-plus"></i> submit</button>
