@@ -9,7 +9,8 @@ npm run setup
 #to run the app in dev mode
 npm run dev
 ```
-the app should be on http://localhost:5173
+the app should be on http://localhost:5173<br>
+the setup create one admin user identified as `admin@gmail.com` and password of `password` and 12 `company` to test the admin dashboard
 ## Email testing
 open `MailHog_windows_amd64.exe` to start the local email server<br>
-the emails in the app in configured locally to be sent through `MailHog` at<br> http://localhost:8025
+the emails in the app are configured locally to be sent through `MailHog` at<br> http://localhost:8025
